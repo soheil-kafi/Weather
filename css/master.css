@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.all {
+  color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/hero.jpg) center top / cover;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.128);
+  padding: 80px 50px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form input {
+  width: 100%;
+  font-size: 15px;
+  padding: 9px 19px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.form input:focus {
+  outline: none;
+  border: none;
+}
+.form button {
+  color: white;
+  background-color: crimson;
+  outline: none;
+  border: none;
+  padding: 12px 29px;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 18px;
+}
+.form button:hover {
+  background-color: rgba(220, 20, 60, 0.7);
+}
+.weather {
+  font-size: 20px;
+  font-family: sans-serif;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather * {
+  margin: 10px 0;
+}
+/* spinner */
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #de3500 #0000 #fff #0000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: 1s rotate linear infinite;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+  transform: translate(-10px, 19px) rotate(-35deg);
+}
+.loader:after {
+  border-color: #de3500 #0000 #0000 #0000;
+  transform: translate(32px, 3px) rotate(-35deg);
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+h1 {
+  color: dodgerblue;
+  margin-bottom: 10px;
+}
+h2 {
+  color: rgb(224, 153, 140);
+  display: none;
+  margin-top: 10px;
+}
